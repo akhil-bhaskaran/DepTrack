@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pattip/components/elv_button.dart';
 import 'package:pattip/components/txt_feild.dart';
+import 'package:pattip/pages/home_page.dart';
+import 'package:pattip/pages/sing_up.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -43,7 +45,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: double.maxFinite,
                   height: MediaQuery.of(context).size.height * .35,
-                  child: const Column(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       TxtFeild(hintText: 'Email'),
@@ -52,6 +54,13 @@ class LoginPage extends StatelessWidget {
                         isOb: true,
                       ),
                       ElvButton(
+                        onpressed: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(
+                            builder: (context) {
+                              return HomePage();
+                            },
+                          ));
+                        },
                         txt: 'Login',
                       )
                     ],
@@ -65,7 +74,11 @@ class LoginPage extends StatelessWidget {
                         style: const ButtonStyle(
                             padding: WidgetStatePropertyAll(
                                 EdgeInsets.symmetric(horizontal: 0))),
-                        onPressed: () {},
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SingUp(),
+                            )),
                         child: const Text(
                           'Sing-Up',
                         ))
