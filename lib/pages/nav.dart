@@ -1,8 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:pattip/pages/home_page.dart';
 import 'package:pattip/pages/menu.dart';
+import 'package:pattip/pages/profile.dart';
 
 class Nav extends StatefulWidget {
   const Nav({super.key});
@@ -12,14 +11,11 @@ class Nav extends StatefulWidget {
 }
 
 class _NavState extends State<Nav> {
-  List<Widget> widgetList = [HomePage(), MenuPage()];
+  List<Widget> widgetList = [HomePage(), const MenuPage(), const Profile()];
   int navIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        log(navIndex.toString());
-      }),
       body: IndexedStack(
         index: navIndex,
         children: widgetList,
@@ -28,7 +24,7 @@ class _NavState extends State<Nav> {
         currentIndex: navIndex,
         onTap: (value) {
           navIndex = value;
-          log(value.toString());
+
           setState(() {});
         },
         items: const [

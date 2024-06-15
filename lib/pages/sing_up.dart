@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pattip/components/elv_button.dart';
 import 'package:pattip/components/txt_feild.dart';
-import 'package:pattip/pages/home_page.dart';
+
 import 'package:pattip/pages/nav.dart';
 
 class SingUp extends StatelessWidget {
