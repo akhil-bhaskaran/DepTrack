@@ -134,13 +134,13 @@ class HomePage extends StatelessWidget {
                 isFirst: true,
                 isLast: false,
               ),
-              Timeline(
+              const Timeline(
                 txt: DayCard(day: "Yesterday", amount: 100),
                 isFirst: false,
                 isLast: false,
               ),
               Timeline(
-                txt: DayCard(
+                txt: const DayCard(
                   day: " More",
                 ),
                 isFirst: false,
@@ -149,7 +149,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => History(),
+                        builder: (context) => const History(),
                       ));
                 },
               ),

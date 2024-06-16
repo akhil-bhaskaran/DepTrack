@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:pattip/pages/home_page.dart';
 import 'package:pattip/pages/menu.dart';
@@ -20,21 +21,25 @@ class _NavState extends State<Nav> {
         index: navIndex,
         children: widgetList,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: navIndex,
+      bottomNavigationBar: CurvedNavigationBar(
+        animationDuration: Duration(milliseconds: 200),
+        backgroundColor: Colors.white,
+        height: 70,
+        buttonBackgroundColor: Colors.black,
+        color: Colors.black38,
+        index: navIndex,
         onTap: (value) {
           navIndex = value;
 
           setState(() {});
         },
         items: const [
-          BottomNavigationBarItem(
-            label: 'Home',
-            icon: Icon(Icons.home),
+          Icon(
+            Icons.home,
+            color: Colors.white,
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_2_sharp), label: 'Profile')
+          Icon(Icons.menu, color: Colors.white),
+          Icon(Icons.person_2_sharp, color: Colors.white)
         ],
       ),
     );
