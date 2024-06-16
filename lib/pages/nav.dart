@@ -12,7 +12,11 @@ class Nav extends StatefulWidget {
 }
 
 class _NavState extends State<Nav> {
-  List<Widget> widgetList = [HomePage(), const MenuPage(), const Profile()];
+  List<Widget> widgetList = [
+    const HomePage(),
+    const MenuPage(),
+    const Profile()
+  ];
   int navIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -22,11 +26,13 @@ class _NavState extends State<Nav> {
         children: widgetList,
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        animationDuration: Duration(milliseconds: 200),
+        animationDuration: const Duration(milliseconds: 200),
         backgroundColor: Colors.white,
         height: 70,
         buttonBackgroundColor: Colors.black,
-        color: Colors.black38,
+        color: navIndex == 0
+            ? Colors.black54
+            : const Color.fromARGB(232, 255, 172, 6),
         index: navIndex,
         onTap: (value) {
           navIndex = value;
