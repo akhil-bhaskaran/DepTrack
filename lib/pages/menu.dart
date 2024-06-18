@@ -122,7 +122,7 @@ class _MenuPageState extends State<MenuPage> {
             },
             label: Column(
               children: [
-                Text(value.totalPrice.toString()),
+                Text("${value.totalPrice}"),
                 Text(
                   "Add Price",
                   style: Values.txtstyle2_1,
