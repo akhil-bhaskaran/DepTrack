@@ -19,6 +19,7 @@ class MenuItemCard extends StatefulWidget {
 
 class _MenuItemCardState extends State<MenuItemCard> {
   int quantity = 0;
+  double totalPrice = 0;
   @override
   Widget build(BuildContext context) {
     return Slidable(
@@ -28,6 +29,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
           onPressed: (context) {
             setState(() {
               quantity++;
+              totalPrice += widget.price;
             });
           },
           autoClose: false,
@@ -60,7 +62,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
                   widget.imageUrl,
                   width: 100,
                   height: 100,
-                  fit: BoxFit.contain,
+                  fit: BoxFit.cover,
                 ),
               ),
               const SizedBox(width: 10.0),
@@ -69,6 +71,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
                           widget.foodName,
@@ -91,7 +94,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
                 ),
               ),
               const SizedBox(child: Text("Quantity ")),
-              Text('$quantity')
+              Text('$quantity'),
             ],
           ),
         ),
