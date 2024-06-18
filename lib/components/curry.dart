@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pattip/components/menucard.dart';
+import 'package:pattip/components/provider.dart';
+import 'package:provider/provider.dart';
 
 class Curry extends StatelessWidget {
   Curry({super.key});
@@ -17,22 +19,24 @@ class Curry extends StatelessWidget {
     'Kadala Curry',
     "Soya Been",
   ];
-  List<double> mFoodPrcie = [
-    10,
-    10,
-    15,
-    15,
-    10,
-  ];
+  // List<double> mFoodPrcie = [
+  //   10,
+  //   10,
+  //   15,
+  //   15,
+  //   10,
+  // ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      primary: false,
-      itemBuilder: (context, index) => MenuItemCard(
-          imageUrl: mFoodPic[index],
-          foodName: mFoodName[index],
-          price: mFoodPrcie[index]),
-      itemCount: mFoodPrcie.length,
+    return Consumer<MenuProvider>(
+      builder: (context, value, child) => ListView.builder(
+        primary: false,
+        itemBuilder: (context, index) => MenuItemCard(
+            imageUrl: mFoodPic[index],
+            foodName: mFoodName[index],
+            price: value.cFoodPrcie[index]),
+        itemCount: value.cFoodPrcie.length,
+      ),
     );
   }
 }
