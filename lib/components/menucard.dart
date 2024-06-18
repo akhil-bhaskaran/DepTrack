@@ -6,7 +6,8 @@ class MenuItemCard extends StatefulWidget {
   final String foodName;
   final double price;
 
-  MenuItemCard({
+  const MenuItemCard({
+    super.key,
     required this.imageUrl,
     required this.foodName,
     required this.price,
@@ -54,12 +55,12 @@ class _MenuItemCardState extends State<MenuItemCard> {
           child: Row(
             children: <Widget>[
               ClipRRect(
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(12.0),
                 child: Image.asset(
                   widget.imageUrl,
                   width: 100,
                   height: 100,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
               const SizedBox(width: 10.0),
@@ -78,10 +79,10 @@ class _MenuItemCardState extends State<MenuItemCard> {
                         ),
                         const SizedBox(height: 5.0),
                         Text(
-                          '\u{20B9}${widget.price.toStringAsFixed(2)}',
+                          '\u{20B9}${widget.price}',
                           style: TextStyle(
                             fontSize: 16.0,
-                            color: Colors.grey[700],
+                            color: Colors.grey[800],
                           ),
                         ),
                       ],

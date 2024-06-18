@@ -7,11 +7,11 @@ class TxtFeild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       height: 67,
       decoration: BoxDecoration(boxShadow: const [
         BoxShadow(
-            color: const Color.fromARGB(208, 158, 158, 158),
+            color: Color.fromARGB(208, 158, 158, 158),
             blurRadius: 14,
             spreadRadius: 4)
       ], borderRadius: BorderRadius.circular(13), color: Colors.white),

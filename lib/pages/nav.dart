@@ -12,11 +12,7 @@ class Nav extends StatefulWidget {
 }
 
 class _NavState extends State<Nav> {
-  List<Widget> widgetList = [
-    const HomePage(),
-    const MenuPage(),
-    const Profile()
-  ];
+  List<Widget> widgetList = [const HomePage(), MenuPage(), const Profile()];
   int navIndex = 0;
   @override
   Widget build(BuildContext context) {

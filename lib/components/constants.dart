@@ -9,6 +9,10 @@ class Values {
 
   static TextStyle txtstyle4 = const TextStyle(
       fontWeight: FontWeight.w900, fontSize: 20, color: Colors.black);
+  static TextStyle txtstyle4_1 = const TextStyle(
+      fontWeight: FontWeight.w900,
+      fontSize: 20,
+      color: Color.fromARGB(255, 255, 255, 255));
   // S I Z E D   B O X
   static SizedBox boxH = const SizedBox(
     height: Values.spaceVertical,
