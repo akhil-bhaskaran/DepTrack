@@ -3,8 +3,14 @@ import 'package:pattip/components/menucard.dart';
 import 'package:pattip/components/provider.dart';
 import 'package:provider/provider.dart';
 
-class Curry extends StatelessWidget {
-  Curry({super.key});
+class Curry extends StatefulWidget {
+  const Curry({super.key});
+
+  @override
+  State<Curry> createState() => _CurryState();
+}
+
+class _CurryState extends State<Curry> {
   List<String> mFoodPic = [
     'assets/sambar.jpeg',
     'assets/chicken.jpeg',
@@ -12,6 +18,7 @@ class Curry extends StatelessWidget {
     'assets/kadala.jpeg',
     'assets/soya.jpeg',
   ];
+
   List<String> mFoodName = [
     'Samabar',
     'Chicken Curry',
@@ -19,13 +26,8 @@ class Curry extends StatelessWidget {
     'Kadala Curry',
     "Soya Been",
   ];
+
   // List<double> mFoodPrcie = [
-  //   10,
-  //   10,
-  //   15,
-  //   15,
-  //   10,
-  // ];
   @override
   Widget build(BuildContext context) {
     return Consumer<MenuProvider>(

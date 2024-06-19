@@ -19,6 +19,11 @@ class Values {
       wordSpacing: 1,
       color: Color.fromARGB(255, 255, 255, 255));
 
+  static TextStyle txtstyle3 = const TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 16,
+      color: Color.fromARGB(255, 0, 0, 0));
+
   static TextStyle txtstyle4 = const TextStyle(
       fontWeight: FontWeight.w900, fontSize: 20, color: Colors.black);
 

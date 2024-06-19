@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:insta_image_viewer/insta_image_viewer.dart';
 import 'package:pattip/components/constants.dart';
 import 'package:pattip/components/day_card.dart';
 import 'package:pattip/components/menu_items.dart';
+import 'package:pattip/components/profile_appbar.dart';
 import 'package:pattip/components/provider.dart';
 import 'package:pattip/components/timeline.dart';
 import 'package:pattip/pages/history.dart';
@@ -34,39 +34,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InstaImageViewer(
-                      backgroundColor: const Color.fromRGBO(235, 241, 239, 1),
-                      child: CircleAvatar(
-                        radius: 28,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(30)),
-                              image: DecorationImage(
-                                  image: AssetImage('assets/shibin.jpg'))),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 12,
-                    ),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text(
-                          "Hi, Monaayi ",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w900, fontSize: 20),
-                        ),
-                        Text("Good morning!..")
-                      ],
-                    ),
-                  ],
-                ),
+                const ProfileAppbar(),
                 IconButton(
                     onPressed: () {},
                     icon: const Icon(

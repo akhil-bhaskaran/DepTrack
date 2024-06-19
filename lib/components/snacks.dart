@@ -3,14 +3,21 @@ import 'package:pattip/components/menucard.dart';
 import 'package:pattip/components/provider.dart';
 import 'package:provider/provider.dart';
 
-class Snacks extends StatelessWidget {
-  Snacks({super.key});
+class Snacks extends StatefulWidget {
+  const Snacks({super.key});
+
+  @override
+  State<Snacks> createState() => _SnacksState();
+}
+
+class _SnacksState extends State<Snacks> {
   List<String> mFoodPic = [
     'assets/bond.jpeg',
     'assets/parip.jpeg',
     'assets/pazham.jpeg',
     'assets/ulli.jpeg',
   ];
+
   List<String> mFoodName = [
     'Bonda',
     'Paprip Vada',

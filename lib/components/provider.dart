@@ -85,6 +85,7 @@ class MenuProvider extends ChangeNotifier {
   ];
   double totalPrice = 0;
   double todaysExpense = 0;
+
   @override
   void notifyListeners() {
     todaysExpense;
