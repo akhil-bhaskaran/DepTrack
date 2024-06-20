@@ -19,7 +19,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -62,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                         Values.boxH,
                         Text(
                           '\u{20B9}'
-                          " ${value.totalPrice + value.todaysExpense}",
+                          " ${value.totalPrice}",
                           style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 19),
                         ),

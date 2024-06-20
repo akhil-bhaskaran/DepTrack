@@ -88,12 +88,19 @@ class MenuProvider extends ChangeNotifier {
 
   void addSum(double price) {
     todaysExpense += price;
-    totalPrice += todaysExpense;
+    totalPrice += price;
+
     notifyListeners();
   }
 
   void minus(double price) {
     totalPrice -= price;
+    todaysExpense -= price;
+    notifyListeners();
+  }
+
+  void clearPrice() {
+    todaysExpense = 0;
     notifyListeners();
   }
 }

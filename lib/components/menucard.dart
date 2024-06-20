@@ -32,9 +32,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
             onPressed: (context) {
               setState(() {
                 quantity++;
-                value.totalPrice += widget.price;
-
-                print(value.totalPrice);
+                value.addSum(widget.price);
               });
             },
             autoClose: false,
@@ -44,8 +42,10 @@ class _MenuItemCardState extends State<MenuItemCard> {
             autoClose: false,
             onPressed: (context) {
               setState(() {
-                if (quantity > 0) quantity--;
-                value.addSum(widget.price);
+                if (quantity > 0) {
+                  quantity--;
+                  value.minus(widget.price);
+                }
               });
             },
             icon: Icons.horizontal_rule,
