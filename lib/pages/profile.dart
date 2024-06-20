@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:insta_image_viewer/insta_image_viewer.dart';
 import 'package:pattip/components/circle_button.dart';
 import 'package:pattip/components/constants.dart';
+import 'package:pattip/pages/login_page.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -116,7 +117,6 @@ class Profile extends StatelessWidget {
             },
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   alignment: Alignment.centerLeft,
@@ -168,7 +168,11 @@ class Profile extends StatelessWidget {
                           onPressed: () => Navigator.pop(context),
                           child: const Text("Cancel")),
                       TextButton(
-                          onPressed: () => Navigator.pop(context),
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LoginPage(),
+                              )),
                           child: const Text("Yes"))
                     ],
                   );

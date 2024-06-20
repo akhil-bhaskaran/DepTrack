@@ -45,7 +45,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
             onPressed: (context) {
               setState(() {
                 if (quantity > 0) quantity--;
-                value.totalPrice -= widget.price;
+                value.addSum(widget.price);
               });
             },
             icon: Icons.horizontal_rule,

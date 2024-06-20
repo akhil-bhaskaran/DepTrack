@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WidgetsFlutterBinding.ensureInitialized();
-    return ChangeNotifierProvider(
+    return ChangeNotifierProvider<MenuProvider>(
       create: (context) => MenuProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: LoginPage(),
+        home: const LoginPage(),
         theme: ThemeData(
           fontFamily: 'poppins',
         ),
