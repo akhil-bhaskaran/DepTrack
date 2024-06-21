@@ -3,7 +3,7 @@ import 'package:pattip/components/elv_button.dart';
 import 'package:pattip/components/txt_feild.dart';
 
 import 'package:pattip/pages/nav.dart';
-import 'package:pattip/pages/sing_up.dart';
+import 'package:pattip/pages/sign_up.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
