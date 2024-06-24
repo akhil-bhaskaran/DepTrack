@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pattip/components/colors.dart';
 
 import 'package:pattip/components/constants.dart';
 import 'package:pattip/components/curry.dart';
@@ -24,7 +25,7 @@ class _MenuPageState extends State<MenuPage> {
   Widget build(BuildContext context) {
     return Consumer<MenuProvider>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: const Color.fromARGB(255, 255, 136, 0),
+        backgroundColor: ColorPattern.ylo,
         body: ListView(
           children: [
             Container(
@@ -88,7 +89,7 @@ class _MenuPageState extends State<MenuPage> {
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
               height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: ColorPattern.gr,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.elliptical(60, 30),
                       topRight: Radius.elliptical(60, 30))),

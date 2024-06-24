@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pattip/components/colors.dart';
 
 import 'package:pattip/components/constants.dart';
 import 'package:pattip/components/day_card.dart';
@@ -26,6 +27,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<MenuProvider>(
       builder: (context, value, child) => Scaffold(
+        backgroundColor: ColorPattern.gr,
         body: SafeArea(
             child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),

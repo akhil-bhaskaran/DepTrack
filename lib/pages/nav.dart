@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:pattip/components/colors.dart';
 import 'package:pattip/pages/home_page.dart';
 import 'package:pattip/pages/menu.dart';
 import 'package:pattip/pages/profile.dart';
@@ -12,7 +13,11 @@ class Nav extends StatefulWidget {
 }
 
 class _NavState extends State<Nav> {
-  List<Widget> widgetList = [const HomePage(), MenuPage(), const Profile()];
+  List<Widget> widgetList = [
+    const HomePage(),
+    const MenuPage(),
+    const Profile()
+  ];
   int navIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -23,12 +28,10 @@ class _NavState extends State<Nav> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         animationDuration: const Duration(milliseconds: 200),
-        backgroundColor: Colors.white,
+        backgroundColor: ColorPattern.gr,
         height: 70,
-        buttonBackgroundColor: Colors.black,
-        color: navIndex == 0
-            ? Colors.black54
-            : const Color.fromARGB(232, 255, 172, 6),
+        buttonBackgroundColor: ColorPattern.ylo,
+        color: ColorPattern.ylo,
         index: navIndex,
         onTap: (value) {
           navIndex = value;
