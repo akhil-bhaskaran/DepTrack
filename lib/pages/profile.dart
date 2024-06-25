@@ -34,59 +34,62 @@ class Profile extends StatelessWidget {
                         child: Container(
                           decoration: const BoxDecoration(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(70)),
+                                  BorderRadius.all(Radius.circular(75)),
                               image: DecorationImage(
                                   image: AssetImage('assets/shibin.jpg'))),
                         ),
                       ),
                     ),
                     Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: IconButton(
-                            onPressed: () {
-                              showModalBottomSheet(
-                                  context: context,
-                                  builder: (context) => Container(
-                                        height: 150,
-                                        width:
-                                            MediaQuery.of(context).size.width,
-                                        decoration: const BoxDecoration(
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(18),
-                                                topRight: Radius.circular(18))),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
-                                          children: [
-                                            Text(
-                                              "Profile photo",
-                                              style: Values.txtstyle3,
-                                            ),
-                                            const Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
-                                              children: [
-                                                CircleButton(
-                                                    size: 55,
-                                                    icons: Icons
-                                                        .camera_alt_outlined),
-                                                CircleButton(
-                                                    size: 55,
-                                                    icons: Icons.image),
-                                                CircleButton(
-                                                    size: 55,
-                                                    icons: Icons.delete),
-                                              ],
-                                            )
-                                          ],
+                      bottom: 0,
+                      right: 0,
+                      child: IconButton.filled(
+                        style: ButtonStyle(
+                            backgroundColor:
+                                WidgetStatePropertyAll(ColorPattern.rd)),
+                        onPressed: () {
+                          showModalBottomSheet(
+                              context: context,
+                              builder: (context) => Container(
+                                    height: 150,
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(18),
+                                            topRight: Radius.circular(18))),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          "Profile photo",
+                                          style: Values.txtstyle3,
                                         ),
-                                      ));
-                            },
-                            icon: const CircleButton(
-                              size: 45,
-                              icons: Icons.camera_alt_outlined,
-                            ))),
+                                        const Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            CircleButton(
+                                                size: 55,
+                                                icons:
+                                                    Icons.camera_alt_outlined),
+                                            CircleButton(
+                                                size: 55, icons: Icons.image),
+                                            CircleButton(
+                                                size: 55, icons: Icons.delete),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ));
+                        },
+                        icon: const Icon(
+                          size: 30,
+                          Icons.camera_alt_outlined,
+                        ),
+                        color: Colors.white,
+                      ),
+                    ),
                   ],
                 ),
               ),

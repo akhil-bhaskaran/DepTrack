@@ -20,7 +20,7 @@ class _ProfileAppbarState extends State<ProfileAppbar> {
             radius: 28,
             child: Container(
               decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(70)),
+                  borderRadius: BorderRadius.all(Radius.circular(65)),
                   image:
                       DecorationImage(image: AssetImage('assets/shibin.jpg'))),
             ),

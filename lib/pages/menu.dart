@@ -25,7 +25,7 @@ class _MenuPageState extends State<MenuPage> {
   Widget build(BuildContext context) {
     return Consumer<MenuProvider>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: ColorPattern.ylo,
+        backgroundColor: ColorPattern.gr,
         body: ListView(
           children: [
             Container(
@@ -60,14 +60,9 @@ class _MenuPageState extends State<MenuPage> {
                             duration: const Duration(milliseconds: 200),
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
-                                border: current == index
-                                    ? Border.all(color: Colors.white, width: 3)
-                                    : Border.all(
-                                        color: const Color.fromARGB(
-                                            214, 255, 136, 0)),
                                 color: current == index
-                                    ? const Color.fromARGB(255, 255, 132, 0)
-                                    : const Color.fromARGB(255, 255, 255, 255),
+                                    ? ColorPattern.rd
+                                    : ColorPattern.gr,
                                 borderRadius: BorderRadius.circular(19)),
                             margin: const EdgeInsets.symmetric(horizontal: 5),
                             width: 100,

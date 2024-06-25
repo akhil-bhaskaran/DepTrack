@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:pattip/components/colors.dart';
 import 'package:pattip/components/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -29,6 +30,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
         endActionPane: ActionPane(motion: const StretchMotion(), children: [
           SlidableAction(
             flex: 1,
+            backgroundColor: ColorPattern.gr,
             onPressed: (context) {
               setState(() {
                 quantity++;
@@ -39,6 +41,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
             icon: Icons.add,
           ),
           SlidableAction(
+            backgroundColor: ColorPattern.gr,
             autoClose: false,
             onPressed: (context) {
               setState(() {

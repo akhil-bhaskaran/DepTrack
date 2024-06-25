@@ -30,8 +30,8 @@ class _NavState extends State<Nav> {
         animationDuration: const Duration(milliseconds: 200),
         backgroundColor: ColorPattern.gr,
         height: 70,
-        buttonBackgroundColor: ColorPattern.ylo,
-        color: ColorPattern.ylo,
+        buttonBackgroundColor: ColorPattern.rd,
+        color: ColorPattern.rd,
         index: navIndex,
         onTap: (value) {
           navIndex = value;
