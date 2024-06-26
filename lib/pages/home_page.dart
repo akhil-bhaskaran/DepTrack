@@ -32,16 +32,10 @@ class _HomePageState extends State<HomePage> {
             child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const ProfileAppbar(),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.view_list,
-                      size: 30,
-                    ))
+                ProfileAppbar(),
               ],
             ),
             Values.boxH,

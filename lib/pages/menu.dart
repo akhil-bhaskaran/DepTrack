@@ -36,9 +36,10 @@ class _MenuPageState extends State<MenuPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text(
+                    const Text(
                       "Our Menu",
-                      style: Values.txtstyle4_1,
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
 
                     //T A B    B A R
@@ -57,7 +58,7 @@ class _MenuPageState extends State<MenuPage> {
                           },
                           child: AnimatedContainer(
                             curve: Curves.easeInOutSine,
-                            duration: const Duration(milliseconds: 200),
+                            duration: const Duration(milliseconds: 250),
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                                 color: current == index
@@ -107,7 +108,7 @@ class _MenuPageState extends State<MenuPage> {
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
-            backgroundColor: const Color.fromARGB(255, 240, 180, 0),
+            backgroundColor: Color.fromARGB(255, 255, 0, 0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
@@ -120,13 +121,13 @@ class _MenuPageState extends State<MenuPage> {
               children: [
                 Text("${value.todaysExpense}"),
                 Text(
-                  "Add Price",
-                  style: Values.txtstyle2_1,
+                  "Add",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.white),
                 )
               ],
             )),
-        floatingActionButtonLocation:
-            FloatingActionButtonLocation.miniCenterFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
       ),
     );
   }
@@ -137,11 +138,11 @@ class _MenuPageState extends State<MenuPage> {
         return MainDishes();
 
       case 1:
-        return Curry();
+        return const Curry();
       case 2:
-        return Side();
+        return const Side();
       case 3:
-        return Snacks();
+        return const Snacks();
       default:
         MainDishes();
     }

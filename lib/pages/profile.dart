@@ -44,7 +44,7 @@ class Profile extends StatelessWidget {
                       bottom: 0,
                       right: 0,
                       child: IconButton.filled(
-                        style: ButtonStyle(
+                        style: const ButtonStyle(
                             backgroundColor:
                                 WidgetStatePropertyAll(ColorPattern.rd)),
                         onPressed: () {

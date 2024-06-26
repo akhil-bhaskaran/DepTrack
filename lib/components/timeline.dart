@@ -20,10 +20,16 @@ class Timeline extends StatelessWidget {
       child: SizedBox(
         height: 100,
         child: TimelineTile(
+          beforeLineStyle: const LineStyle(color: Colors.amber),
+          afterLineStyle: const LineStyle(
+            color: Colors.amber,
+          ),
           isFirst: isFirst,
           isLast: isLast,
           endChild: txt,
-          indicatorStyle: IndicatorStyle(),
+          indicatorStyle: const IndicatorStyle(
+            color: Colors.amber,
+          ),
         ),
       ),
     );
