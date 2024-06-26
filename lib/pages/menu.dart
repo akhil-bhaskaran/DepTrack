@@ -29,8 +29,9 @@ class _MenuPageState extends State<MenuPage> {
         body: ListView(
           children: [
             Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 7.6,
+              height: MediaQuery.of(context).size.height / 4.6,
               color: Colors.transparent,
               child: Center(
                 child: Column(
@@ -41,7 +42,22 @@ class _MenuPageState extends State<MenuPage> {
                       style:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
-
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    Container(
+                        alignment: Alignment.topLeft,
+                        child: const Text(
+                          "Delicious food ready to \ndelivered for you",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
+                        )),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     //T A B    B A R
                     SizedBox(
                       width: double.infinity,
@@ -108,7 +124,7 @@ class _MenuPageState extends State<MenuPage> {
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
-            backgroundColor: Color.fromARGB(255, 255, 0, 0),
+            backgroundColor: const Color.fromARGB(255, 255, 0, 0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
@@ -120,7 +136,7 @@ class _MenuPageState extends State<MenuPage> {
             label: Column(
               children: [
                 Text("${value.todaysExpense}"),
-                Text(
+                const Text(
                   "Add",
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.white),

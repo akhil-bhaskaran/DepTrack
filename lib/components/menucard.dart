@@ -56,7 +56,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
           )
         ]),
         child: Card(
-          margin: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.symmetric(vertical: 8.0),
           elevation: 5.0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
