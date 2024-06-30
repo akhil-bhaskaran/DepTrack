@@ -31,7 +31,7 @@ class _MenuPageState extends State<MenuPage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 4.6,
+              height: MediaQuery.of(context).size.height / 4,
               color: ColorPattern.gr,
               child: Center(
                 child: Column(
@@ -56,7 +56,7 @@ class _MenuPageState extends State<MenuPage> {
                     Container(
                       height: 45,
                       decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                                 blurRadius: 5,
                                 spreadRadius: 1,
