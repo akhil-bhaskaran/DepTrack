@@ -40,8 +40,8 @@ class _MenuPageState extends State<MenuPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                         const Text(
-                          "Total :" ,
+                        const Text(
+                          "Total :",
                           style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
@@ -56,13 +56,19 @@ class _MenuPageState extends State<MenuPage> {
                     Container(
                       height: 45,
                       decoration: BoxDecoration(
-                        boxShadow: [BoxShadow(blurRadius: 5,spreadRadius: 1,color: Colors.black12)],
-                        color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 5,
+                                spreadRadius: 1,
+                                color: Colors.black12)
+                          ],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(5)),
                       child: const TextField(
                         decoration: InputDecoration(
-                          suffixIcon: Icon(Icons.search),
-                            border: InputBorder.none, hintText: '\t\t Search..'),
+                            suffixIcon: Icon(Icons.search),
+                            border: InputBorder.none,
+                            hintText: '\t\t Search..'),
                       ),
                     ),
                     const SizedBox(
@@ -133,27 +139,6 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ],
         ),
-        // floatingActionButton: FloatingActionButton.extended(
-        //     backgroundColor: const Color.fromARGB(255, 255, 0, 0),
-        //     shape: RoundedRectangleBorder(
-        //       borderRadius: BorderRadius.circular(30),
-        //     ),
-        //     onPressed: () {
-        //       setState(() {
-        //         value.clearPrice();
-        //       });
-        //     },
-        //     label: Column(
-        //       children: [
-        //         Text("${value.todaysExpense}"),
-        //         const Text(
-        //           "Add",
-        //           style: TextStyle(
-        //               fontWeight: FontWeight.bold, color: Colors.white),
-        //         )
-        //       ],
-        //     )),
-        // floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
       ),
     );
   }
