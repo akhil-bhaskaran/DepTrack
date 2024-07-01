@@ -32,29 +32,39 @@ class _MenuPageState extends State<MenuPage> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 4.6,
-              color: Colors.transparent,
+              color: ColorPattern.gr,
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text(
-                      "Our Menu",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                         const Text(
+                          "Total :" ,
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.verified_rounded))
+                      ],
                     ),
                     const SizedBox(
                       height: 12,
                     ),
                     Container(
-                        alignment: Alignment.topLeft,
-                        child: const Text(
-                          "Delicious food ready to \ndelivered for you",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 22,
-                          ),
-                        )),
+                      height: 45,
+                      decoration: BoxDecoration(
+                        boxShadow: [BoxShadow(blurRadius: 5,spreadRadius: 1,color: Colors.black12)],
+                        color: Colors.white,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          suffixIcon: Icon(Icons.search),
+                            border: InputBorder.none, hintText: '\t\t Search..'),
+                      ),
+                    ),
                     const SizedBox(
                       height: 20,
                     ),
@@ -80,7 +90,7 @@ class _MenuPageState extends State<MenuPage> {
                                 color: current == index
                                     ? ColorPattern.rd
                                     : ColorPattern.gr,
-                                borderRadius: BorderRadius.circular(19)),
+                                borderRadius: BorderRadius.circular(10)),
                             margin: const EdgeInsets.symmetric(horizontal: 5),
                             width: 100,
                             child: Text(
@@ -123,27 +133,27 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton.extended(
-            backgroundColor: const Color.fromARGB(255, 255, 0, 0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
-            ),
-            onPressed: () {
-              setState(() {
-                value.clearPrice();
-              });
-            },
-            label: Column(
-              children: [
-                Text("${value.todaysExpense}"),
-                const Text(
-                  "Add",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.white),
-                )
-              ],
-            )),
-        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+        // floatingActionButton: FloatingActionButton.extended(
+        //     backgroundColor: const Color.fromARGB(255, 255, 0, 0),
+        //     shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.circular(30),
+        //     ),
+        //     onPressed: () {
+        //       setState(() {
+        //         value.clearPrice();
+        //       });
+        //     },
+        //     label: Column(
+        //       children: [
+        //         Text("${value.todaysExpense}"),
+        //         const Text(
+        //           "Add",
+        //           style: TextStyle(
+        //               fontWeight: FontWeight.bold, color: Colors.white),
+        //         )
+        //       ],
+        //     )),
+        // floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pattip/components/colors.dart';
 import 'package:pattip/components/elv_button.dart';
 import 'package:pattip/components/txt_feild.dart';
 
@@ -11,8 +12,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: ListView(
+      backgroundColor: ColorPattern.rd,
+      body: Column(
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
@@ -49,8 +50,8 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      TxtFeild(hintText: 'Email'),
-                      TxtFeild(
+                      const TxtFeild(hintText: 'Email'),
+                      const TxtFeild(
                         hintText: 'Password',
                         isOb: true,
                       ),

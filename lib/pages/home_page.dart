@@ -3,7 +3,6 @@ import 'package:pattip/components/colors.dart';
 
 import 'package:pattip/components/constants.dart';
 import 'package:pattip/components/day_card.dart';
-import 'package:pattip/components/menu_items.dart';
 import 'package:pattip/components/profile_appbar.dart';
 import 'package:pattip/components/provider.dart';
 import 'package:pattip/components/timeline.dart';
@@ -42,8 +41,8 @@ class _HomePageState extends State<HomePage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
               decoration: BoxDecoration(
-                  color: Colors.black12,
-                  borderRadius: BorderRadius.circular(27)),
+                  color: ColorPattern.rd,
+                  borderRadius: BorderRadius.circular(20)),
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 4,
               child: Row(
@@ -53,55 +52,60 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Total Expenses ", style: Values.txtstyle1),
+                        const Text("Total Expenses ",
+                            style: TextStyle(color: Colors.white)),
                         Values.boxH,
                         Text(
                           '\u{20B9}'
                           " ${value.totalPrice}",
                           style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 19),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 29),
                         ),
                         Values.boxH,
-                        Text(
+                        const Text(
                           "Todays Expense",
-                          style: Values.txtstyle1,
+                          style: TextStyle(color: Colors.white),
                         ),
                         Values.boxH,
                         Text(
                           '\u{20B9}' " ${value.todaysExpense}",
                           style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 19),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19),
                         ),
                       ],
                     ),
                   ),
-                  Expanded(
-                    child: SizedBox(
-                      child: Image.asset('assets/chart.png'),
-                    ),
-                  )
+                  // Expanded(
+                  //   child: SizedBox(
+                  //     child: Image.asset('assets/chart.png'),
+                  //   ),
+                  // )
                 ],
               ),
             ),
             Values.boxH,
-            Text(
-              "Today's Special !",
-              style: Values.txtstyle4,
-            ),
-            Values.boxH,
-            SizedBox(
-              height: 100,
-              width: MediaQuery.of(context).size.width,
-              child: GridView.builder(
-                scrollDirection: Axis.horizontal,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 1,
-                    mainAxisExtent: 100,
-                    mainAxisSpacing: 12),
-                itemBuilder: (context, index) => const MenuItems(),
-                itemCount: 4,
-              ),
-            ),
+            // Text(
+            //   "Today's Special !",
+            //   style: Values.txtstyle4,
+            // ),
+            //Values.boxH,
+            // SizedBox(
+            //   height: 100,
+            //   width: MediaQuery.of(context).size.width,
+            //   child: GridView.builder(
+            //     scrollDirection: Axis.horizontal,
+            //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            //         crossAxisCount: 1,
+            //         mainAxisExtent: 100,
+            //         mainAxisSpacing: 12),
+            //     itemBuilder: (context, index) => const MenuItems(),
+            //     itemCount: 4,
+            //   ),
+            // ),
             Values.boxH,
             Text(
               "Expense History",

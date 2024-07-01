@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pattip/components/colors.dart';
 import 'package:pattip/components/elv_button.dart';
 import 'package:pattip/components/txt_feild.dart';
 
@@ -10,7 +11,7 @@ class SingUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: ColorPattern.rd,
       body: ListView(
         children: [
           SizedBox(
@@ -24,7 +25,7 @@ class SingUp extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back)),
+                    icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)),
                 const Text(
                   "Sign Up",
                   style: TextStyle(
@@ -33,7 +34,7 @@ class SingUp extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       letterSpacing: 3),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 37,
                 )
               ],
@@ -49,7 +50,7 @@ class SingUp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 4,
                 ),
                 TxtFeild(hintText: 'First Name'),
@@ -73,24 +74,24 @@ class SingUp extends StatelessWidget {
                   },
                   txt: 'Login',
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text("Don't have  an account?"),
-                    TextButton(
-                        style: const ButtonStyle(
-                            padding: WidgetStatePropertyAll(
-                                EdgeInsets.symmetric(horizontal: 0))),
-                        onPressed: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SingUp(),
-                            )),
-                        child: const Text(
-                          'Sing-Up',
-                        ))
-                  ],
-                )
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     const Text("Don't have  an account?"),
+                //     TextButton(
+                //         style: const ButtonStyle(
+                //             padding: WidgetStatePropertyAll(
+                //                 EdgeInsets.symmetric(horizontal: 0))),
+                //         onPressed: () => Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //               builder: (context) => SingUp(),
+                //             )),
+                //         child: const Text(
+                //           'Sing-Up',
+                //         ))
+                //   ],
+                // )
               ],
             ),
           ),
