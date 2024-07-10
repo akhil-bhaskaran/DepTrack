@@ -32,9 +32,8 @@ class _MenuPageState extends State<MenuPage> {
               decoration: const BoxDecoration(
                   color: Colors.amber,
                   borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.elliptical(400, 50),
-                        bottomRight: Radius.elliptical(400, 50)
-                      )),
+                      bottomLeft: Radius.elliptical(400, 50),
+                      bottomRight: Radius.elliptical(400, 50))),
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 4.5,
