@@ -4,6 +4,7 @@ import 'package:pattip/components/colors.dart';
 import 'package:pattip/pages/home_page.dart';
 import 'package:pattip/pages/menu.dart';
 import 'package:pattip/pages/profile.dart';
+import 'package:pattip/sample_widgets/my_menu_page.dart';
 
 class Nav extends StatefulWidget {
   const Nav({super.key});
@@ -15,7 +16,7 @@ class Nav extends StatefulWidget {
 class _NavState extends State<Nav> {
   List<Widget> widgetList = [
     const HomePage(),
-    const MenuPage(),
+    const MyMenuPage(),
     const Profile()
   ];
   int navIndex = 0;

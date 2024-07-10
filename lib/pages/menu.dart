@@ -25,105 +25,109 @@ class _MenuPageState extends State<MenuPage> {
   Widget build(BuildContext context) {
     return Consumer<MenuProvider>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: ColorPattern.gr,
+        backgroundColor: ColorPattern.rd,
         body: ListView(
           children: [
             Container(
+              decoration: const BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.elliptical(400, 50),
+                        bottomRight: Radius.elliptical(400, 50)
+                      )),
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 4,
-              color: ColorPattern.gr,
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          "Total :",
-                          style: TextStyle(
-                              fontSize: 24, fontWeight: FontWeight.bold),
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.verified_rounded))
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Container(
-                      height: 45,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                color: Colors.black12)
-                          ],
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5)),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.search),
-                            border: InputBorder.none,
-                            hintText: '\t\t Search..'),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    //T A B    B A R
-                    SizedBox(
-                      width: double.infinity,
-                      height: 40,
-                      child: ListView.builder(
-                        physics: const BouncingScrollPhysics(),
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 4,
-                        itemBuilder: (context, index) => GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              current = index;
-                            });
-                          },
-                          child: AnimatedContainer(
-                            curve: Curves.easeInOutSine,
-                            duration: const Duration(milliseconds: 250),
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                color: current == index
-                                    ? ColorPattern.rd
-                                    : ColorPattern.gr,
-                                borderRadius: BorderRadius.circular(10)),
-                            margin: const EdgeInsets.symmetric(horizontal: 5),
-                            width: 100,
-                            child: Text(
-                              menu[index],
-                              style: current == index
-                                  ? Values.txtstyle2_1
-                                  : Values.txtstyle2,
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              height: MediaQuery.of(context).size.height / 4.5,
+              // color: Color.fromARGB(199, 0, 255, 157),
+              // child: Center(
+              //   child: Column(
+              //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //     children: [
+              //       Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //         children: [
+              //           const Text(
+              //             "Total :",
+              //             style: TextStyle(
+              //                 fontSize: 24, fontWeight: FontWeight.bold),
+              //           ),
+              //           IconButton(
+              //               onPressed: () {},
+              //               icon: const Icon(Icons.verified_rounded))
+              //         ],
+              //       ),
+              //       const SizedBox(
+              //         height: 12,
+              //       ),
+              //       Container(
+              //         height: 45,
+              //         decoration: BoxDecoration(
+              //             boxShadow: const [
+              //               BoxShadow(
+              //                   blurRadius: 5,
+              //                   spreadRadius: 1,
+              //                   color: Colors.black12)
+              //             ],
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.circular(5)),
+              //         child: const TextField(
+              //           decoration: InputDecoration(
+              //               suffixIcon: Icon(Icons.search),
+              //               border: InputBorder.none,
+              //               hintText: '\t\t Search..'),
+              //         ),
+              //       ),
+              //       const SizedBox(
+              //         height: 20,
+              //       ),
+              //       //T A B    B A R
+              //       SizedBox(
+              //         width: double.infinity,
+              //         height: 40,
+              //         child: ListView.builder(
+              //           physics: const BouncingScrollPhysics(),
+              //           scrollDirection: Axis.horizontal,
+              //           itemCount: 4,
+              //           itemBuilder: (context, index) => GestureDetector(
+              //             onTap: () {
+              //               setState(() {
+              //                 current = index;
+              //               });
+              //             },
+              //             child: AnimatedContainer(
+              //               curve: Curves.easeInOutSine,
+              //               duration: const Duration(milliseconds: 250),
+              //               alignment: Alignment.center,
+              //               decoration: BoxDecoration(
+              //                   color: current == index
+              //                       ? ColorPattern.rd
+              //                       : ColorPattern.gr,
+              //                   borderRadius: BorderRadius.circular(10)),
+              //               margin: const EdgeInsets.symmetric(horizontal: 5),
+              //               width: 100,
+              //               child: Text(
+              //                 menu[index],
+              //                 style: current == index
+              //                     ? Values.txtstyle2_1
+              //                     : Values.txtstyle2,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
               height: MediaQuery.of(context).size.height,
-              decoration: const BoxDecoration(
-                  color: ColorPattern.gr,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.elliptical(60, 30),
-                      topRight: Radius.elliptical(60, 30))),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     menu[current],
                     style: Values.txtstyle4,
