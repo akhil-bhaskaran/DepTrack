@@ -33,10 +33,10 @@ class MyMenuPage extends StatelessWidget {
           right: 0,
           left: 0,
           child: Container(
-            decoration:  BoxDecoration(
-              border: Border.all(color: Colors.white,width: 5),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 5),
               shape: BoxShape.circle,
-              color:ColorPattern.rd,
+              color: ColorPattern.rd,
             ),
             width: 100,
             height: 100,
@@ -44,7 +44,12 @@ class MyMenuPage extends StatelessWidget {
               child: IconButton(
                   onPressed: () {
                     log("button pressed");
-                  }, icon: const Icon(Icons.verified,color: Colors.white,size: 40,)),
+                  },
+                  icon: const Icon(
+                    Icons.verified,
+                    color: Colors.white,
+                    size: 40,
+                  )),
             ),
           ),
         ),
