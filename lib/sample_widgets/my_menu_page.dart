@@ -41,8 +41,14 @@ class MyMenuPage extends StatelessWidget {
                             onPressed: () {}, icon: const Icon(Icons.delete))
                       ],
                     ),
-                    const Text("\u{20B9} 0.0",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                    const SizedBox(height: 10,),
+                    const Text(
+                      "\u{20B9} 0.0",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
                   ],
                 ))
           ],
