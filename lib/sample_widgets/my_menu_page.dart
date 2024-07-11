@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:pattip/components/colors.dart';
 
@@ -40,7 +42,9 @@ class MyMenuPage extends StatelessWidget {
             height: 100,
             child: Center(
               child: IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.verified,color: Colors.white,size: 40,)),
+                  onPressed: () {
+                    log("button pressed");
+                  }, icon: const Icon(Icons.verified,color: Colors.white,size: 40,)),
             ),
           ),
         ),
